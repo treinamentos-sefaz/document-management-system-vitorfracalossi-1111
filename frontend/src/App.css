@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap');
+
+:root { font-family: 'DM Sans', sans-serif; color: #242d2a; background: #f5f6f2; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: wait; opacity: .6; }
+button:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid #d5a248; outline-offset: 3px; }
+.app-shell { min-height: 100vh; display: flex; flex-direction: column; }
+.topbar { background: #fff; border-bottom: 1px solid #e1e6e0; }
+.topbar-inner { max-width: 1440px; height: 76px; margin: auto; padding: 0 6%; display: flex; align-items: center; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1d3129; font-weight: 700; font-size: 19px; }
+.brand-mark { width: 31px; height: 31px; display: grid; place-items: center; background: #244e3e; color: white; font-family: 'DM Serif Display', serif; font-size: 21px; }
+.brand-dot { color: #c88048; }
+.topbar-label, .eyebrow, .section-kicker, .list-labels, .mobile-label, .footer { font-size: 10px; font-weight: 700; color: #78877e; }
+.workspace { width: 100%; max-width: 1440px; margin: 0 auto; padding: 67px 6% 100px; flex: 1; }
+.page-heading { display: flex; justify-content: space-between; align-items: end; gap: 20px; padding-bottom: 40px; border-bottom: 1px solid #dce3db; }
+.eyebrow { color: #a26d42; }
+h1, h2, p { margin: 0; }
+h1 { margin-top: 15px; font-family: 'DM Serif Display', serif; font-size: 46px; font-weight: 400; line-height: 1.1; color: #20372d; }
+.page-heading p { margin-top: 11px; color: #758179; font-size: 14px; }
+.document-count { display: flex; flex-direction: column; align-items: end; gap: 3px; color: #7e8a82; font-size: 12px; }
+.document-count strong { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 30px; color: #385b4a; }
+.workspace-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 65px; padding-top: 42px; }
+.section-heading { min-height: 66px; display: flex; justify-content: space-between; align-items: start; gap: 16px; }
+.section-kicker { color: #9c7858; }
+h2 { font-size: 19px; margin-top: 8px; font-weight: 700; }
+.text-button { padding: 4px 0; border: 0; background: transparent; color: #416d57; font-size: 12px; font-weight: 700; }
+.list-labels, .document-row { display: grid; grid-template-columns: minmax(0, 2fr) minmax(90px, 1fr) minmax(90px, .8fr) 42px; gap: 16px; align-items: center; }
+.list-labels { padding: 14px 0; border-bottom: 1px solid #dce3db; }
+.document-row { min-height: 82px; border-bottom: 1px solid #e1e6df; }
+.document-name { min-width: 0; display: flex; align-items: center; gap: 12px; }
+.file-icon { flex: 0 0 38px; width: 38px; height: 42px; display: grid; place-items: center; background: #e6ede7; color: #426d56; font-size: 19px; }
+.document-name div { min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.document-name strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }
+.document-name div span, .document-meta { color: #7b8780; font-size: 12px; overflow-wrap: anywhere; }
+.download-action { position: relative; }
+.download-button { width: 38px; height: 38px; border: 1px solid #dce4dc; background: transparent; color: #3a674e; font-size: 21px; border-radius: 4px; }
+.download-button:hover { background: #e6ede7; }
+.download-error { position: absolute; right: 0; top: 44px; z-index: 1; width: 200px; padding: 10px; background: #fff; border: 1px solid #e7ceca; color: #a13d34; font-size: 12px; }
+.mobile-label { display: none; }
+.upload-section { border-left: 1px solid #dce3db; padding-left: 36px; }
+.upload-form { display: flex; flex-direction: column; margin-top: 28px; }
+.upload-form label { margin-bottom: 8px; font-size: 12px; font-weight: 700; }
+.upload-form input[type='text'] { width: 100%; height: 44px; padding: 0 12px; border: 1px solid #d6ded6; border-radius: 4px; background: #fff; color: #242d2a; margin-bottom: 22px; }
+.upload-form input::placeholder { color: #a4aea7; }
+.file-field { padding: 15px; border: 1px dashed #b6c6b8; background: #edf2eb; border-radius: 4px; }
+.file-field input { width: 100%; font-size: 12px; color: #65756a; }
+.file-field input::file-selector-button { display: block; margin: 0 0 10px; border: 1px solid #bdcfc0; background: white; color: #315742; border-radius: 3px; padding: 7px 10px; font: inherit; font-weight: 700; cursor: pointer; }
+.primary-button { display: flex; align-items: center; justify-content: space-between; margin-top: 20px; padding: 14px 15px; border: 0; border-radius: 4px; background: #285741; color: white; font-size: 13px; font-weight: 700; }
+.primary-button:hover { background: #1d4432; }
+.primary-button span { font-size: 17px; }
+.form-message { margin-top: 12px; font-size: 12px; line-height: 1.5; }
+.success { color: #286345; }
+.error-text, .error { color: #a13d34; }
+.notice { margin: 12px 0; padding: 12px; background: #f9eeeb; font-size: 13px; }
+.empty-state { min-height: 210px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #77877b; text-align: center; font-size: 13px; }
+.empty-state strong { color: #40564a; margin-top: 12px; }
+.empty-state p { margin-top: 6px; }
+.empty-symbol { display: grid; place-items: center; width: 42px; height: 42px; background: #e6ede7; color: #557961; font-size: 24px; }
+.footer { max-width: 1440px; width: 100%; margin: auto; padding: 20px 6% 28px; display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid #e1e6df; }
+@media (max-width: 800px) { .workspace { padding-top: 40px; } .workspace-grid { grid-template-columns: 1fr; gap: 38px; } .upload-section { grid-row: 1; border-left: 0; border-bottom: 1px solid #dce3db; padding: 0 0 32px; } .upload-form { max-width: 500px; } }
+@media (max-width: 560px) { .topbar-inner { height: 64px; } .topbar-label { display: none; } h1 { font-size: 36px; } .page-heading { padding-bottom: 28px; } .document-count strong { font-size: 25px; } .list-labels { display: none; } .document-row { grid-template-columns: minmax(0, 1fr) 42px; gap: 10px; padding: 16px 0; } .document-name { grid-column: 1; } .document-meta { grid-column: 1; padding-left: 50px; } .mobile-label { display: inline; margin-right: 8px; font-size: 9px; } .download-action { grid-column: 2; grid-row: 1; } .footer span:last-child { display: none; } }

@@ -105,3 +105,7 @@ Etapas funcionais em alto nível. A decomposição de implementação dos arquiv
 - Qual será o nome do campo de arquivo no `multipart/form-data` e como nomes duplicados serão tratados.
 - Quais códigos HTTP, formatos de resposta e mensagens de erro serão adotados para entradas inválidas, identificadores inexistentes e falhas de filesystem.
 - Quais variáveis de ambiente serão necessárias e se o caminho local poderá ser configurado ou permanecerá fixo em `backend/storage`.
+
+## 10. Limitação de segurança atual
+
+O campo `owner` recebido no upload é informado pelo cliente e serve apenas como metadado; ele não comprova a identidade do usuário. Como autenticação e autorização estão fora do escopo atual, a API não deve ser considerada privada: qualquer cliente com acesso ao backend pode listar e baixar os documentos. Não armazene documentos confidenciais nem exponha a API publicamente até que uma identidade confiável e regras de autorização sejam definidas e implementadas.

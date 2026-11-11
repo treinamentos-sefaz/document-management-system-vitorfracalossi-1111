@@ -1,7 +1,9 @@
 const path = require('node:path');
 const { mkdir, unlink } = require('node:fs/promises');
 
-const storageDirectory = path.resolve(__dirname, '../../storage');
+const storageDirectory = path.resolve(
+  process.env.DMS_STORAGE_DIR || path.resolve(__dirname, '../../storage'),
+);
 const documents = new Map();
 
 async function prepareStorage() {

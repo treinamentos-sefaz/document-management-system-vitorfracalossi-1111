@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: Build frontend e testes do backend
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Instalar dependências do backend
+        working-directory: backend
+        run: npm install --no-audit --no-fund
+
+      - name: Instalar dependências do frontend
+        working-directory: frontend
+        run: npm install --no-audit --no-fund
+
+      - name: Buildar o frontend
+        working-directory: frontend
+        run: npm run build
+
+      - name: Rodar testes do backend
+        working-directory: backend
+        run: npm test
